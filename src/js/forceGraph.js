@@ -158,3 +158,5 @@ window.addEventListener('resize', function() {
 	svg.attr('width', width)
 		.attr('height', height)
 })
+
+window.addEventListener('selectstart', function(e) { e.preventDefault() })
