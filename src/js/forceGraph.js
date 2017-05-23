@@ -23,6 +23,9 @@ d3.json('src/data/graph.json', function(error, json) {
 	update()
 })
 
+let maxSal = 0
+let minSal = Number.MAX_VALUE
+
 function update() {
 	let nodes = flatten(root),
 		links = d3.layout.tree().links(nodes)
@@ -84,6 +87,9 @@ function update() {
 
 	nodeEnter.each(function(d) {
 
+		if (d.size < minSal) minSal = d.size
+		if (d.size > maxSal) maxSal = d.size
+
 		let avg = averageOfChildren(d)
 		d.r = avg / 300 || 4.5
 		d.avgSize = avg
@@ -103,7 +109,7 @@ function update() {
 	nodeEnter.append('text')
 		.attr('dy', '1em')
 		.text(function(d) {
-			return '$' + d.avgSize
+			return '$' + d.avgSize.toFixed(0)
 		})
 
 	node.select('circle')
@@ -130,11 +136,13 @@ function tick() {
 }
 
 function color(d) {
-	return d._children ? '#3182bd' // collapsed package
-		:
-		d.children ? '#c6dbef' // expanded package
-		:
-		'#fd8d3c' // leaf node
+
+	let normSize = (d.avgSize - minSal) / (maxSal - minSal)
+	let col = d3.scale.linear()
+		.domain([minSal, (maxSal + minSal) / 2, maxSal])
+		.range(['#6c006b', 'white', '#24ff00'])
+	return col(d.avgSize)
+
 }
 
 // Toggle children on click.
