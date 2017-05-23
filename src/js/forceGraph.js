@@ -27,6 +27,7 @@ let maxSal = 0
 let minSal = Number.MAX_VALUE
 
 function update() {
+
 	let nodes = flatten(root),
 		links = d3.layout.tree().links(nodes)
 
@@ -55,14 +56,14 @@ function update() {
 
 	let nodeEnter = node.enter().append('g')
 		.attr('class', 'node')
-		.on('click', click)
+		.on('click', function(d) { click(d, false) })
 		.call(force.drag)
 
 	function getChildSizeArr(node) {
 
 		let sizeArr = []
 
-		if (node.hasOwnProperty('children')) {
+		if (node.children) {
 			node.children.forEach(function(child) {
 				let childSizeArr = getChildSizeArr(child)
 				sizeArr = sizeArr.concat(childSizeArr)
@@ -91,8 +92,11 @@ function update() {
 		if (d.size > maxSal) maxSal = d.size
 
 		let avg = averageOfChildren(d)
-		d.r = avg / 300 || 4.5
+		d.r = avg / 2500 || 4.5
 		d.avgSize = avg
+
+		if (d.top) click(d, true)
+
 	})
 
 	nodeEnter.append('circle')
@@ -140,14 +144,16 @@ function color(d) {
 	let normSize = (d.avgSize - minSal) / (maxSal - minSal)
 	let col = d3.scale.linear()
 		.domain([minSal, (maxSal + minSal) / 2, maxSal])
-		.range(['#6c006b', 'white', '#24ff00'])
+		.range(['#ff0000', 'white', '#24ff00'])
 	return col(d.avgSize)
 
 }
 
 // Toggle children on click.
-function click(d) {
-	if (d3.event.defaultPrevented) return // ignore drag
+function click(d, ignoreEvent) {
+	if (!ignoreEvent) {
+		if (d3.event.defaultPrevented) return // ignore drag
+	}
 	if (d.children) {
 		d._children = d.children
 		d.children = null

@@ -3,6 +3,7 @@
     "children": [
         {
             "name": "Art and Design",
+            "top": true,
             "children": [{
                 "name": "Actors",
                 "size": null
@@ -76,6 +77,7 @@
         },
         {
             "name": "Architecture and Engineering",
+            "top": true,
             "children": [{
                 "name": "Aerospace Engineers",
                 "size": 65100
@@ -188,6 +190,7 @@
         },
         {
             "name": "Building and Ground Maintenance",
+            "top": true,
             "children": [{
                 "name": "Maids and Housekeeping Cleaners",
                 "size": 17600
@@ -216,6 +219,7 @@
         },
         {
             "name": "Business and Finance",
+            "top": true,
             "children": [{
                 "name": "Accountants and Auditors",
                 "size": 53300
@@ -316,6 +320,7 @@
         },
         {
             "name": "Community and Social Services",
+            "top": true,
             "children": [{
                 "name": "Marriage and Family Therapists",
                 "size": 43200
@@ -371,6 +376,7 @@
         },
         {
             "name": "Computer and Mathematics",
+            "top": true,
             "children": [{
                 "name": "Mathematical Science Occupations, All Other",
                 "size": 63600
@@ -426,6 +432,7 @@
         },
         {
             "name": "Construction and Extraction",
+            "top": true,
             "children": [{
                 "name": "Brickmasons and Blockmasons",
                 "size": 43000
@@ -607,6 +614,7 @@
         },
         {
             "name": "Legal, Law Enforcement & Criminal Justice",
+            "top": true,
             "children": [{
                 "name": "Accounting Forensics",
                 "size": null
@@ -764,6 +772,7 @@
         },
         {
             "name": "Legal Education, Training and Library",
+            "top": true,
             "children": [{
                 "name": "Anthropology and Archeology Teachers, Postsecondary",
                 "size": 62800
@@ -960,6 +969,7 @@
         },
         {
             "name": "Farming, Fishing and Forestry",
+            "top": true,
             "children": [{
                 "name": "Logging Equipment Operators",
                 "size": 29700
@@ -1009,6 +1019,7 @@
         },
         {
             "name": "Food Preparation and Serving",
+            "top": true,
             "children": [{
                 "name": "Bartenders",
                 "size": 16400
@@ -1067,6 +1078,7 @@
         },
         {
             "name": "Healthcare Practitioner and Technician",
+            "top": true,
             "children": [{
                 "name": "Biomedical Equipment Technician",
                 "size": 53300
@@ -1242,6 +1254,7 @@
         },
         {
             "name": "Healthcare Support",
+            "top": true,
             "children": [{
                 "name": "Home Health Aides",
                 "size": 19400
@@ -1288,6 +1301,7 @@
         },
         {
             "name": "Installation and Repair",
+            "top": true,
             "children": [{
                 "name": "Bus and Truck Mechanics and Diesel Engine Specialists",
                 "size": 37700
@@ -1445,6 +1459,7 @@
         },
         {
             "name": "Management",
+            "top": true,
             "children": [{
                 "name": "Compensation and Benefits Managers",
                 "size": 74800
@@ -1554,6 +1569,7 @@
         },
         {
             "name": "Life, Physical and Social Science",
+            "top": true,
             "children": [{
                 "name": "Agricultural and Food Science Technicians",
                 "size": 31700
@@ -1690,6 +1706,7 @@
         },
         {
             "name": "Office and Administrative Support",
+            "top": true,
             "children": [{
                 "name": "Bookkeeping, Accounting, and Auditing Clerks",
                 "size": 30600
@@ -1859,6 +1876,7 @@
         },
         {
             "name": "Personal Care and Service",
+            "top": true,
             "children": [{
                 "name": "Amusement and Recreation Attendants",
                 "size": 16300
@@ -1965,6 +1983,7 @@
         },
         {
             "name": "Production",
+            "top": true,
             "children": [{
                 "name": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
                 "size": 45400
@@ -2299,6 +2318,7 @@
         },
         {
             "name": "Protective Service",
+            "top": true,
             "children": [{
                 "name": "First-Line Supervisors/Managers of Fire Fighting and Prevention Workers",
                 "size": 62900
@@ -2366,6 +2386,7 @@
         },
         {
             "name": "Sales and Marketing",
+            "top": true,
             "children": [{
                 "name": "Cashiers",
                 "size": 16800
@@ -2436,6 +2457,7 @@
         },
         {
             "name": "Transportation and Moving",
+            "top": true,
             "children": [{
                 "name": "Air Traffic Controllers",
                 "size": 117200
