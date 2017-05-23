@@ -82,15 +82,28 @@ function update() {
 
 	}
 
+	nodeEnter.each(function(d) {
+
+		let avg = averageOfChildren(d)
+		d.r = avg / 300 || 4.5
+		d.avgSize = avg
+	})
+
 	nodeEnter.append('circle')
 		.attr('r', function(d) {
-			return averageOfChildren(d) / 300 || 4.5
+			return d.r
 		})
 
 	nodeEnter.append('text')
-		.attr('dy', '.35em')
+		.attr('dy', '0em')
 		.text(function(d) {
 			return d.name
+		})
+
+	nodeEnter.append('text')
+		.attr('dy', '1em')
+		.text(function(d) {
+			return '$' + d.avgSize
 		})
 
 	node.select('circle')
