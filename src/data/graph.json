@@ -5,9 +5,6 @@
             "name": "Art and Design",
             "top": true,
             "children": [{
-                "name": "Actors",
-                "size": null
-            }, {
                 "name": "Media and Communication Workers, All Other",
                 "size": 42600
             }, {
@@ -18,13 +15,13 @@
                 "size": 43000
             }, {
                 "name": "Broadcast News Analysts",
-                "size": null
+                "size": 60600
             }, {
                 "name": "Art Directors",
-                "size": null
+                "size": 83000
             }, {
                 "name": "Artists and Related Workers, All Other",
-                "size": null
+                "size": 53700
             }, {
                 "name": "Interpreters and Translators",
                 "size": 35600
@@ -33,7 +30,7 @@
                 "size": 25000
             }, {
                 "name": "Athletes and Sports Competitors",
-                "size": null
+                "size": 39000
             }, {
                 "name": "Writers and Authors",
                 "size": 56200
@@ -43,9 +40,6 @@
             }, {
                 "name": "Radio and Television Announcers",
                 "size": 24300
-            }, {
-                "name": "Musicians and Singers",
-                "size": 0
             }, {
                 "name": "Technical Writers",
                 "size": 58000
@@ -72,7 +66,7 @@
                 "size": 37900
             }, {
                 "name": "Camera Operators, Television, Video, and Motion Picture",
-                "size": null
+                "size": 51500
             }]
         },
         {
@@ -616,20 +610,17 @@
             "name": "Legal, Law Enforcement & Criminal Justice",
             "top": true,
             "children": [{
-                "name": "Accounting Forensics",
-                "size": null
-            }, {
                 "name": "Border Patrol Agent",
-                "size": null
+                "size": 40000
             }, {
                 "name": "ATF Agent",
-                "size": null
+                "size": 35500
             }, {
                 "name": "Computer Forensics",
-                "size": null
+                "size": 65500
             }, {
                 "name": "CIA Agent",
-                "size": null
+                "size": 85000
             }, {
                 "name": "Administrative Law Judges, Adjudicators, and Hearing Officers",
                 "size": 72600
@@ -638,55 +629,52 @@
                 "size": 49500
             }, {
                 "name": "Corrections Officer",
-                "size": null
+                "size": 37000
             }, {
                 "name": "Bailiff",
-                "size": null
+                "size": 38000
             }, {
                 "name": "Coast Guard",
-                "size": null
+                "size": 45000
             }, {
                 "name": "Court Reporters",
                 "size": 45600
-            }, {
-                "name": "Federal Protective Service",
-                "size": null
             }, {
                 "name": "Mediators",
                 "size": 66800
             }, {
                 "name": "Customs Agent",
-                "size": null
+                "size": 35000
             }, {
                 "name": "Penologist",
-                "size": null
+                "size": 57380
             }, {
                 "name": "Diplomatic Security Agent",
-                "size": null
+                "size": 55000
             }, {
                 "name": "Police Detective",
-                "size": null
+                "size": 55000
             }, {
                 "name": "Criminologist",
-                "size": null
+                "size": 40000
             }, {
                 "name": "Law Clerks",
                 "size": 36400
             }, {
                 "name": "IRS Special Agent",
-                "size": null
+                "size": 43000
             }, {
                 "name": "Forensic Psychology",
-                "size": null
+                "size": 55000
             }, {
                 "name": "Information Security",
-                "size": null
+                "size": 76200
             }, {
                 "name": "Private Investigator",
-                "size": null
+                "size": 35000
             }, {
                 "name": "FBI Agent",
-                "size": null
+                "size": 60000
             }, {
                 "name": "Crime Scene Investigator",
                 "size": 32600
@@ -695,76 +683,67 @@
                 "size": 43000
             }, {
                 "name": "TSA Screener",
-                "size": null
+                "size": 26000
             }, {
                 "name": "U.S. Marshal",
-                "size": null
+                "size": 41250
             }, {
                 "name": "Private Security",
-                "size": null
+                "size": 31000
             }, {
                 "name": "Police Officer",
-                "size": null
+                "size": 48210
             }, {
                 "name": "Substance Abuse Counselor",
-                "size": null
+                "size": 45000
             }, {
                 "name": "Sheriff",
-                "size": null
+                "size": 50000
             }, {
                 "name": "Criminalist",
-                "size": null
+                "size": 42000
             }, {
                 "name": "Fraud Investigator",
-                "size": null
+                "size": 40000
             }, {
                 "name": "Fish & Game Warden",
-                "size": null
-            }, {
-                "name": "Federal Air Marshal",
-                "size": null
+                "size": 38000
             }, {
                 "name": "Judges, Magistrate Judges, and Magistrates",
                 "size": 101700
             }, {
                 "name": "Immigration Agent",
-                "size": null
+                "size": 51000
             }, {
                 "name": "INS Agent",
-                "size": null
+                "size": 50000
             }, {
                 "name": "DEA Agent",
-                "size": null
+                "size": 43000
             }, {
                 "name": "Prison Warden",
-                "size": null
+                "size": 50000
             }, {
                 "name": "Forensic Science",
-                "size": null
+                "size": 41000
             }, {
                 "name": "Crime Laboratory Analyst",
-                "size": null
-            }, {
-                "name": "Homeland Security Agent Salary",
-                "size": null
+                "size": 39000
             }, {
                 "name": "Lawyers",
                 "size": 102500
             }, {
                 "name": "NSA Police Officer",
-                "size": null
+                "size": 44729
             }, {
                 "name": "Legal Support Workers, All Other",
                 "size": 45100
             }, {
                 "name": "Juvenile Probation Counselor",
-                "size": null
+                "size": 44000
             }, {
                 "name": "Probation Officer",
-                "size": null
-            }, {
-                "name": "Secret Service Agent",
-                "size": null
+                "size": 45600
             }, {
                 "name": "Title Examiners, Abstractors, and Searchers",
                 "size": 36000
@@ -1846,9 +1825,6 @@
                 "name": "Receptionists and Information Clerks",
                 "size": 22900
             }, {
-                "name": "Proofreaders and Copy Markers",
-                "size": null
-            }, {
                 "name": "Reservation and Transportation Ticket Agents and Travel Clerks",
                 "size": 28500
             }, {
@@ -1919,9 +1895,6 @@
             }, {
                 "name": "Child Care Workers",
                 "size": 17600
-            }, {
-                "name": "Entertainment Attendants and Related Workers, All Other",
-                "size": 0
             }, {
                 "name": "Gaming Service Workers, All Other",
                 "size": 21900
