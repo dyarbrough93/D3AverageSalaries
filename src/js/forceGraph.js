@@ -3,9 +3,10 @@ let width = window.innerWidth - 20,
 	root
 
 let force = d3.layout.force()
-	.linkDistance(130)
-	.charge(-500)
-	.gravity(.1)
+	.linkDistance(200)
+	.charge(-1000)
+	.gravity(.3)
+	.linkStrength(0.5)
 	.size([width, height])
 	.on('tick', tick)
 
