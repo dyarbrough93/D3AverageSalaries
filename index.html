@@ -21,12 +21,28 @@
             stroke: #9ecae1;
             stroke-width: 1.5px;
         }
+        #title {
+            position: absolute;
+            left: 50%;
+            top: 1.2em;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            margin-top: 0.2em;
+        }
+        #title h3, h4 {
+            margin: 0;
+            text-align: center;
+        }
     </style>
     <script src="lib/js/d3.v3.min.js"></script>
     
 </head>
 
 <body>
+    <div id="title">
+        <h3>Median Salary by Field</h3>
+        <h4>(click a field to view jobs in that field)</h4>
+    </div>
     <script src="src/js/forceGraph.js"></script>
 </body>
 

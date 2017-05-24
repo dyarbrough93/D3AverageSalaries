@@ -176,8 +176,6 @@ function tick() {
 
 function color(d) {
 
-	if (d.name === 'All') return '#ffffff'
-
 	let domain = d.top ? [minAvgSal, maxAvgSal] :
 		[minSal, maxSal]
 
