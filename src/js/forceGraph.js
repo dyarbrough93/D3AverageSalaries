@@ -27,6 +27,12 @@ d3.json('src/data/graph.json', function(error, json) {
 let maxSal = 0
 let minSal = Number.MAX_VALUE
 
+let maxAvgSal = 0
+let minAvgSal = Number.MAX_VALUE
+
+let closeAll = true
+let currentlyOpened
+
 function update() {
 
 	let nodes = flatten(root),
@@ -57,15 +63,19 @@ function update() {
 
 	let nodeEnter = node.enter().append('g')
 		.attr('class', 'node')
-		.on('click', function(d) { click(d, false) })
+		.on('click', function(d) {
+			click(d, false)
+		})
 		.call(force.drag)
 
 	function getChildSizeArr(node) {
 
 		let sizeArr = []
 
-		if (node.children) {
-			node.children.forEach(function(child) {
+		let children = node.children ? node.children : node._children
+
+		if (children) {
+			children.forEach(function(child) {
 				let childSizeArr = getChildSizeArr(child)
 				sizeArr = sizeArr.concat(childSizeArr)
 			})
@@ -87,18 +97,27 @@ function update() {
 
 	}
 
-	nodeEnter.each(function(d) {
+	if (closeAll) {
 
-		if (d.size < minSal) minSal = d.size
-		if (d.size > maxSal) maxSal = d.size
+		nodeEnter.each(function(d) {
 
-		let avg = averageOfChildren(d)
-		d.r = avg / 2500 || 4.5
-		d.avgSize = avg
+			if (d.size < minSal) minSal = d.size
+			if (d.size > maxSal) maxSal = d.size
 
-		if (d.top) click(d, true)
+			let avg = averageOfChildren(d)
+			d.r = avg / 2500 || 4.5
+			d.avgSize = avg
 
-	})
+			if (d.top) {
+				if (avg < minAvgSal) minAvgSal = avg
+				if (avg > maxAvgSal) maxAvgSal = avg
+			}
+
+			if (d.top) click(d, true)
+
+		})
+
+	}
 
 	nodeEnter.append('circle')
 		.attr('r', function(d) {
@@ -117,8 +136,23 @@ function update() {
 			return '$' + d.avgSize.toFixed(0)
 		})
 
+	if (currentlyOpened) {
+		node.append('text')
+		.attr('dy', '1.75em')
+		.text(function(d) {
+			return d.top ? '(click to return)' : ''
+		})
+	}
+
 	node.select('circle')
 		.style('fill', color)
+		.on('mouseover', function(d) {
+			if (d.top && d.name !== 'All')
+				d3.select(this).style('opacity', '0.5')
+		})
+		.on('mouseout', function(d) {
+			d3.select(this).style('opacity', '1')
+		})
 }
 
 function tick() {
@@ -142,18 +176,35 @@ function tick() {
 
 function color(d) {
 
-	let normSize = (d.avgSize - minSal) / (maxSal - minSal)
+	if (d.name === 'All') return '#ffffff'
+
+	let domain = d.top ? [minAvgSal, maxAvgSal] :
+		[minSal, maxSal]
+
 	let col = d3.scale.linear()
-		.domain([minSal, (maxSal + minSal) / 2, maxSal])
-		.range(['#ff0000', 'white', '#24ff00'])
+		.domain(domain)
+		.range(['#aabfff', '#24ff00'])
+
 	return col(d.avgSize)
 
 }
 
+let origRoot
+
 // Toggle children on click.
 function click(d, ignoreEvent) {
+	if (d.name === 'All') return
 	if (!ignoreEvent) {
 		if (d3.event.defaultPrevented) return // ignore drag
+		if (d._children) {
+			origRoot = root
+			root = d
+			closeAll = false
+			currentlyOpened = d.name
+		} else if (d.name === currentlyOpened) {
+			root = origRoot
+			currentlyOpened = null
+		}
 	}
 	if (d.children) {
 		d._children = d.children
@@ -187,4 +238,6 @@ window.addEventListener('resize', function() {
 		.attr('height', height)
 })
 
-window.addEventListener('selectstart', function(e) { e.preventDefault() })
+window.addEventListener('selectstart', function(e) {
+	e.preventDefault()
+})
